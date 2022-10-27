@@ -1,0 +1,1 @@
+cl /W4 /EHsc validation.cpp -link -out:validation.exe
