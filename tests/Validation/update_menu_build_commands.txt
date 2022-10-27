@@ -1,0 +1,3 @@
+cl /W4 /EHsc update_menu_input.cpp -link -out:update_menu_input.exe
+
+update_menu_input <update_menu_input_infile
