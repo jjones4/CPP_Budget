@@ -72,6 +72,7 @@ void display_results_of_test(string edit_menu_input)
       cout << "Not a positive integer or zero --> "
            << edit_menu_input
            << endl;
+
       return;
    }
 
@@ -80,6 +81,7 @@ void display_results_of_test(string edit_menu_input)
       cout << "Not within range               --> "
            << edit_menu_input
            << endl;
+
       return;
    }
  
@@ -88,6 +90,7 @@ void display_results_of_test(string edit_menu_input)
       cout << "Test passes! Valid input       --> "
            << edit_menu_input
            << endl;
+
       return;
    }
 }
