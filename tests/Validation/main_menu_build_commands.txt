@@ -1,3 +1,3 @@
 cl /W4 /EHsc main_menu_input.cpp -link -out:main_menu_input.exe
 
-main_menu_input < main_menu_input_infile
+main_menu_input <main_menu_input_infile

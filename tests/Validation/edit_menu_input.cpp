@@ -79,7 +79,7 @@ void display_results_of_test(string edit_menu_input)
 
    if(!is_within_edit_menu_range(edit_menu_input))
    {
-      cout << "Not within range               --> "
+      cout << "              Not within range --> "
            << edit_menu_input
            << endl;
 
@@ -88,7 +88,7 @@ void display_results_of_test(string edit_menu_input)
  
    if(is_non_negative_integer(edit_menu_input) && is_within_edit_menu_range(edit_menu_input))
    {
-      cout << "Test passes! Valid input       --> "
+      cout << "                   Test passes --> "
            << edit_menu_input
            << endl;
 
