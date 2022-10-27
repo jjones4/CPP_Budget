@@ -29,8 +29,8 @@
 #include <iostream>
 #include <string>
 
-#define edit_MENU_INPUT_MIN 1
-#define edit_MENU_INPUT_MAX 5
+#define EDIT_MENU_INPUT_MIN 1
+#define EDIT_MENU_INPUT_MAX 5
 
 using std::cin;
 using std::cout;
@@ -121,7 +121,7 @@ bool is_non_negative_integer(const string s)
 
 bool is_within_edit_menu_range(const string s)
 {
-   if(stoi(s) >= edit_MENU_INPUT_MIN && stoi(s) <= edit_MENU_INPUT_MAX)
+   if(stoi(s) >= EDIT_MENU_INPUT_MIN && stoi(s) <= EDIT_MENU_INPUT_MAX)
    {
       return true;
    }
