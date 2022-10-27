@@ -1,0 +1,3 @@
+cl /W4 /EHsc edit_menu_input.cpp -link -out:edit_menu_input.exe
+
+edit_menu_input <edit_menu_input_infile

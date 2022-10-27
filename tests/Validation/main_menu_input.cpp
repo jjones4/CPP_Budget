@@ -94,8 +94,8 @@ void display_results_of_test(string main_menu_input)
 
 // Will be shared by both functions that validate menu input
 // 1) is_valid_main_menu_option() - for the main menu
-// 2) is_valid_update_menu_option() - for when the user is chosing
-//    which part of the budget transaction they want to update
+// 2) is_valid_edit_menu_option() - for when the user is chosing
+//    which part of the budget transaction they want to edit
 bool is_non_negative_integer(const string s)
 {
    // Empty line is integer; handle this specific case

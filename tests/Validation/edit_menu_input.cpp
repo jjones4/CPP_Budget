@@ -1,20 +1,20 @@
 /*
- * Name:       update_menu_input.cpp
+ * Name:       edit_menu_input.cpp
  *
  * Purpose:    Contains functions for testing the different
- *             steps in validating update menu input.
+ *             steps in validating edit menu input.
  *
  *             1. Check if the input is an integer
  *             2. Check if the input is within the acceptable
- *                range for the  update menu's input
+ *                range for the  edit menu's input
  *             3. Display the test results of tests from
- *                an infile called update_menu_input_infile
+ *                an infile called edit_menu_input_infile
  *
  * Note:       I have included an "infile" with some test data.
  *             Run the following command with the infile
  *             that is provided for testing:
  *             
- *                update_menu_input < update_menu_input_infile
+ *                edit_menu_input < edit_menu_input_infile
  *
  * Author:     jjones4
  *
@@ -28,8 +28,8 @@
 #include <iostream>
 #include <string>
 
-#define UPDATE_MENU_INPUT_MIN 1
-#define UPDATE_MENU_INPUT_MAX 5
+#define edit_MENU_INPUT_MIN 1
+#define edit_MENU_INPUT_MAX 5
 
 using std::cin;
 using std::cout;
@@ -37,23 +37,23 @@ using std::endl;
 using std::string;
 using std::stoi;
 
-void display_results_of_test(string update_menu_input);
+void display_results_of_test(string edit_menu_input);
 bool is_non_negative_integer(const string s);
-bool is_within_update_menu_range(const string n);
+bool is_within_edit_menu_range(const string n);
 
 int main()
 {
-   string update_menu_input;
+   string edit_menu_input;
 
    // If there is data to process
-   if(getline(cin, update_menu_input))
+   if(getline(cin, edit_menu_input))
    {
-      display_results_of_test(update_menu_input);
+      display_results_of_test(edit_menu_input);
 
       // If there is data to process, get the rest of it
-      while(getline(cin, update_menu_input))
+      while(getline(cin, edit_menu_input))
       {
-         display_results_of_test(update_menu_input);
+         display_results_of_test(edit_menu_input);
       }
    }
    else
@@ -65,28 +65,28 @@ int main()
    return 0;
 }
 
-void display_results_of_test(string update_menu_input)
+void display_results_of_test(string edit_menu_input)
 {
-   if(!is_non_negative_integer(update_menu_input))
+   if(!is_non_negative_integer(edit_menu_input))
    {
       cout << "Not a positive integer or zero --> "
-           << update_menu_input
+           << edit_menu_input
            << endl;
       return;
    }
 
-   if(!is_within_update_menu_range(update_menu_input))
+   if(!is_within_edit_menu_range(edit_menu_input))
    {
       cout << "Not within range               --> "
-           << update_menu_input
+           << edit_menu_input
            << endl;
       return;
    }
  
-   if(is_non_negative_integer(update_menu_input) && is_within_update_menu_range(update_menu_input))
+   if(is_non_negative_integer(edit_menu_input) && is_within_edit_menu_range(edit_menu_input))
    {
       cout << "Test passes! Valid input       --> "
-           << update_menu_input
+           << edit_menu_input
            << endl;
       return;
    }
@@ -94,8 +94,8 @@ void display_results_of_test(string update_menu_input)
 
 // Will be shared by both functions that validate menu input
 // 1) is_valid_main_menu_option() - for the main menu
-// 2) is_valid_update_menu_option() - for when the user is chosing
-//    which part of the budget transaction they want to update
+// 2) is_valid_edit_menu_option() - for when the user is chosing
+//    which part of the budget transaction they want to edit
 bool is_non_negative_integer(const string s)
 {
    // Empty line is integer; handle this specific case
@@ -115,9 +115,9 @@ bool is_non_negative_integer(const string s)
    return true;
 }
 
-bool is_within_update_menu_range(const string s)
+bool is_within_edit_menu_range(const string s)
 {
-   if(stoi(s) >= UPDATE_MENU_INPUT_MIN && stoi(s) <= UPDATE_MENU_INPUT_MAX)
+   if(stoi(s) >= edit_MENU_INPUT_MIN && stoi(s) <= edit_MENU_INPUT_MAX)
    {
       return true;
    }
