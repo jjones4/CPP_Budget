@@ -10,7 +10,7 @@
  *             3. Display the test results of tests from
  *                an infile called main_menu_input_infile
  *
- * Note:       I have included an "infile" with some tes data.
+ * Note:       I have included an "infile" with some test data.
  *             Run the following command with the infile
  *             that is provided for testing:
  *             
@@ -117,7 +117,7 @@ bool is_non_negative_integer(const string s)
 
 bool is_within_main_menu_range(const string s)
 {
-   if(stoi(s) > 0 && stoi(s) <= MAIN_MENU_INPUT_MAX)
+   if(stoi(s) >= MAIN_MENU_INPUT_MIN && stoi(s) <= MAIN_MENU_INPUT_MAX)
    {
       return true;
    }
