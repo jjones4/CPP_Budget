@@ -7,12 +7,13 @@
  *             1. Check if the input is an integer
  *             2. Check if the input is within the acceptable
  *                range for the main menu's input
- *             3. Display the test results of tests from
+ *             3. Display test results of input data coming from
  *                an infile called main_menu_input_infile
  *
  * Note:       I have included an "infile" with some test data.
- *             Run the following command with the infile
- *             that is provided for testing:
+ *             After compiling the test program, run the following
+ *             command with the infile that is provided for
+ *             testing:
  *             
  *                main_menu_input < main_menu_input_infile
  *
