@@ -43,7 +43,7 @@ using std::stoi;
 #define MAX_YEAR 9999
 
 void parse_date(string& month, string& day, string& year, const string date_input);
-void display_results_of_test(string date_input);
+void display_results_of_test(const string date_input);
 bool is_non_negative_integer(const string s);
 bool is_month_within_range(const string month);
 bool is_year_within_range(const string year);
@@ -73,7 +73,7 @@ int main()
    return 0;
 }
 
-void display_results_of_test(string date_input)
+void display_results_of_test(const string date_input)
 {
    string month, day, year;
 
