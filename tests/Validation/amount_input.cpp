@@ -3,7 +3,7 @@
  *
  * Purpose:    Contains functions for making sure the amount
  *             of the transaction is a decimal number within
- *             the range of 0.00 to 999,999,999.999999999
+ *             the range of 0.00 to 999,999,999.99999
  *
  *             1. Check if the input's characters are integers with
  *                one decimal character
