@@ -1,0 +1,3 @@
+cl /W4 /EHsc amount_input.cpp -link -out:amount_input.exe
+
+amount_input <amount_input_infile
