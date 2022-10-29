@@ -125,13 +125,24 @@ void display_results_of_test(string amount_input)
 void parse_amount(string& integer_part, string& fraction_part, const string amount_input)
 {
    int decimal_point_count = 0;
+   bool dollar_sign_skipped = false;
 
    for(auto c: amount_input)
    {
+      // Skip the first dollar sign
+      if(dollar_sign_skipped == false && decimal_point_count == 0 && c == '$')
+      {
+         dollar_sign_skipped = true;
+         continue;
+      }
       // Before the decimal point, put the characters into
       // the integer part of the amount
-      if(decimal_point_count == 0 && c != '.')
+      else if(decimal_point_count == 0 && c != '.')
       {
+         // If our first character is not a dollar sign, we don't
+         // allow any more dollar signs to be ignored
+         // Additional dollar signs make the data invalid
+         dollar_sign_skipped = true;
          integer_part.push_back(c);
       }
       // After the decimal point, put any characters into
@@ -146,8 +157,8 @@ void parse_amount(string& integer_part, string& fraction_part, const string amou
       }
    }
 
-   // In this case, empty data can be considered valid, such as
-   //  .0 or 1. but not just a point "."
+   // In this case, empty parts of the data can be considered valid,
+   // such as .0 or 1. but not just a single decimal point "."
    // In other cases, such as with the date or menu input
    // validation functions, empty input cannot be valid
 
@@ -156,8 +167,7 @@ void parse_amount(string& integer_part, string& fraction_part, const string amou
    {
       // If the input is completely empty such as a space or 
       // a lone decimal, we don't want to add a zero and
-      // cause the input to become valid. We want to consider
-      // empty input invalid.
+      // cause the input to become valid
       return;
    }
    else if(integer_part == "")
