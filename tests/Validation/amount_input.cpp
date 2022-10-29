@@ -129,8 +129,13 @@ void parse_amount(string& integer_part, string& fraction_part, const string amou
 
    for(auto c: amount_input)
    {
+      // Ignore commas in the integer part
+      if(decimal_point_count == 0 && c == ',')
+      {
+         continue;
+      }
       // Skip the first dollar sign
-      if(dollar_sign_skipped == false && decimal_point_count == 0 && c == '$')
+      else if(dollar_sign_skipped == false && decimal_point_count == 0 && c == '$')
       {
          dollar_sign_skipped = true;
          continue;
