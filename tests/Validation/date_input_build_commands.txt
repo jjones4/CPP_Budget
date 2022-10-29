@@ -1,0 +1,3 @@
+cl /W4 /EHsc date_input.cpp -link -out:date_input.exe
+
+date_input <date_input_infile

@@ -15,7 +15,7 @@
  *             command with the infile that is provided for
  *             testing:
  *             
- *                main_menu_input < main_menu_input_infile
+ *                main_menu_input <main_menu_input_infile
  *
  * Author:     jjones4
  *
@@ -86,7 +86,8 @@ void display_results_of_test(string main_menu_input)
       return;
    }
  
-   if(is_non_negative_integer(main_menu_input) && is_within_main_menu_range(main_menu_input))
+   if(is_non_negative_integer(main_menu_input) &&
+      is_within_main_menu_range(main_menu_input))
    {
       cout << "                   Test passes --> "
            << main_menu_input
@@ -96,10 +97,11 @@ void display_results_of_test(string main_menu_input)
    }
 }
 
-// Will be shared by both functions that validate menu input
+// Will be shared by three different functions that validate input
 // 1) is_valid_main_menu_option() - for the main menu
 // 2) is_valid_edit_menu_option() - for when the user is chosing
 //    which part of the budget transaction they want to edit
+// 3) is_valid_date_inupt() - for validating individual parts of the date
 bool is_non_negative_integer(const string s)
 {
    // Empty line is integer; handle this specific case
