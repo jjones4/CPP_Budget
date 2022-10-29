@@ -44,7 +44,7 @@ using std::stoi;
 using std::strlen;
 
 void parse_amount(string& integer_part, string& fraction_part, const string amount_input);
-void display_results_of_test(string amount_input);
+void display_results_of_test(const string amount_input);
 bool is_non_negative_integer(const string s);
 bool is_integer_part_within_range(const string s);
 bool is_fraction_part_within_range(const string s);
@@ -73,7 +73,7 @@ int main()
    return 0;
 }
 
-void display_results_of_test(string amount_input)
+void display_results_of_test(const string amount_input)
 {
    string integer_part, fraction_part;
 
